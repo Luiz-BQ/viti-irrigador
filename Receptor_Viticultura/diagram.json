@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Receptor Gateway - Viticultura ESP32",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 4.7, "left": -24.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_status",
+      "top": -60,
+      "left": 160,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": 3.95,
+      "left": 115.2,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "led_status:A", "esp:D13", "blue", [ "v0" ] ],
+    [ "led_status:C", "res1:2", "black", [ "v0" ] ],
+    [ "res1:1", "esp:GND.1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
